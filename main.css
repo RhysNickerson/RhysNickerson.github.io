@@ -1,13 +1,13 @@
-:root{
-    
-}
+
 
 body{
     margin:0;
+    
 }
 
 .background-slideshow{
-    background:url(img/external-content.duckduckgo.com.jpeg);
+    background:url(img/01.jpg);
+    transition: background 1s linear;
     background-size:cover;
     background-position:center center;
     position:fixed;
@@ -16,6 +16,7 @@ body{
     height:100vh;
     
     overflow-y:auto;
+    color: white;
 }
 
 /* Probably better way to do this */
@@ -162,12 +163,13 @@ body{
 }
 .title{
     margin-top:40vh;
+    
 }
 
 .background-desc{
     position:absolute;
     text-decoration:none;
-    color:lightgrey;
+    color:white;
     bottom:0;
     right:1vw;
 }
