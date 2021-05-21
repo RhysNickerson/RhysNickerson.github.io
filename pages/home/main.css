@@ -1,0 +1,101 @@
+body{
+    margin:0;
+    font-family: Helvetica;
+    overflow:hidden;
+}
+
+.main{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    height:100vh;
+}
+.menu hr{
+    margin:0;
+}
+.menu{
+    margin:1em;
+    display:grid;
+    min-width:200px;
+
+    grid-template-rows:0.51fr 0.2fr 1fr 0.05fr;
+}
+.menu h1{
+    margin:0px;
+    font-size:calc(24px + 0.8vw);
+}
+#subtitle{
+    margin:0px;
+    margin-top:2px;
+}
+.navigation{
+    left:0;
+    margin:0;
+    padding-left:0;
+    list-style: none;
+}
+.navigation a.nav-item{
+    
+    text-decoration:none;
+    font-size:x-large;
+    display:block;
+    padding-top: 0.5em;
+
+}
+.navigation img{
+    margin-bottom:0.1em;
+}
+a{
+    color:black;
+}
+a:hover{
+    color:grey;
+}
+ul.dropdown {
+    display:block;
+
+    height: 0px;
+    transition: height 0.5s;
+    list-style: none;
+    margin:0;
+    padding-left:1em;
+    overflow:hidden;
+}
+li.dropdown:hover ul.dropdown{
+    height: 5.5em;
+}
+
+a.dropdown img{
+    transform:rotate(0deg);
+    transition: transform 0.5s ease;
+}
+li.dropdown:hover img{
+    transform:rotate(180deg);
+}
+
+.dropdown a{
+    display:block;
+    text-decoration:none;
+    font-size:large;
+    padding-top:0.3em;
+}
+
+.socials{
+    padding-top:1em;
+    height:1.5rem;
+}
+
+#painting-title{
+    font-size: large;
+    margin-bottom:0;
+}
+#painting-desc{
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:medium;
+}
+.slideshow{
+    background-image: url(01.jpg);
+    background-position:center center;
+    background-size: contain ;
+}
+
