@@ -1,76 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <meta http-equiv = "refresh" content = "1; url = ./pages/home/home.html" />
 </head>
-    <title>Test World</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
-    <script>
-
-        
-        
-        var images = [{img: "01.jpg", desc: "Monument, 2020", page_type: "wide", text_color:"white"},{img:"02.jpg",desc:"Witch, 2020",page_type:"thin", text_color:"white"},
-                        {img:"03.jpg",desc: "Tuckamore, 2018", page_type: "wide", text_color:"black"}, {img:"04.jpg",desc: "Loss, 2018", page_type:"thin", text_color:"white"},
-                        {img:"05.jpg",desc: "Elegy, 2020", page_type:"wide",text_color:"black"}, {img:"06.jpg", desc: "Flames, 2019", page_type: "wide",text_color:"white"}    
-    ];
-        var back = document.getElementsByClassName("background-slideshow");
-        var desc = document.getElementsByClassName("background-desc");
-        var cycle = 0;
-        var display_type = "wide";
-        setInterval(function(){
-            updateBackdrop();
-        },6000);
-        function resize(){
-            if(window.innerWidth > window.innerHeight){
-                if(display_type == "wide"){return;}
-                display_type = "wide";
-            }
-            else {
-                if(display_type == "thin"){return;}
-                display_type = "thin";
-            }
-            updateBackdrop();
-        }
-        function updateBackdrop(){
-            var image;
-            var image_select;
-            console.log(display_type);
-            image_select = images.filter((e)=> e.page_type==display_type);
-            if(cycle >= image_select.length){
-                cycle = 0;
-            }else{cycle+=1;}
-            image=image_select[cycle];
-            back[0].style=`background:url(img/${image.img}); background-size:cover; background-position:center center; color:${image.text_color};`;
-            desc[0].textContent=image.desc;
-        }
-        
-    </script>
-<body onresize=resize() >
-    <div class="background-slideshow">
-          <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">About</a>
-            <div class="dropdown">
-                <button class="dropbtn">Galleries 
-                
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Trees</a>
-                  <a href="#">Landscapes</a>
-                  <a href="#">Still Life</a>
-                </div>
-            </div> 
-        </div>
-
-            <div class="mainbody">
-                <h1 class="title">Duane Nickerson</h1>
-                <p class="subtitle">Canadian Fine Artist</p>
-            </div>
-            
-            <a class="background-desc" href="#">Monument, 2020 </a>
-    </div>
-</body>
+   
     
 </html>
 
