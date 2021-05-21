@@ -6,15 +6,16 @@ body{
 
 .main{
     display:grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.20fr 0.8fr;
     height:100vh;
-
+    
     background-image: url(01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
 }
+
 .menu hr{
     margin:0;
 }
@@ -22,16 +23,23 @@ body{
     margin:0;
     padding-left:1em;
     padding-right:0.2em;
+    position:absolute;
+    height:100%;
     display:grid;
-    
     background-color: white;
-    opacity:0.8;
+    opacity:0.93;
 
     grid-template-rows:0.51fr 0.2fr 1fr 0.05fr;
+    transform-origin: 0;
+   transition: transform 1s ease;
+   
+}
+.menu *{
+    transition: opacity 0.5s;
 }
 .menu h1{
     margin:0px;
-    font-size:calc(24px + 1vw);
+    font-size:calc(24px + 1.5vw);
 }
 #subtitle{
     margin:0px;
@@ -104,7 +112,10 @@ li.dropdown:hover img{
     margin-bottom:5px;
     font-size:medium;
 }
-.slideshow{
-    
+#menu-close > img{
+    transition: transform 0.5s ease;
+}
+#menu-close:hover img{
+    transform:scale(1.5);
 }
 
